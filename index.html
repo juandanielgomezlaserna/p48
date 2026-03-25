@@ -9,28 +9,37 @@
 </head>
 <body class="bg-[#000000] text-white font-sans antialiased">
 
-    <header class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-zinc-800">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-black border-2 border-red-600 rounded-full flex items-center justify-center overflow-hidden">
-                    <span class="text-white font-black text-xs text-center leading-tight">FAST<br>FOOD<br><span class="text-red-600">P-48</span></span>
-                </div>
-                <div class="hidden sm:block">
-                    <h2 class="text-xl font-black tracking-tighter leading-none">P-48 <span class="text-red-600 italic text-sm block">MANIZALES</span></h2>
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800">
+        <nav class="container mx-auto px-6 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="/" class="transition-transform hover:scale-105 active:scale-95 duration-300">
+                    <img src="assets/logo.png" alt="Logo P-48 Fast Food" class="h-16 w-auto object-contain">
+                </a>
+                <div class="hidden lg:block border-l border-zinc-700 pl-4">
+                    <h2 class="text-xl font-black tracking-tighter leading-none text-white uppercase italic">
+                        P-48 <span class="text-red-600 block text-xs tracking-[0.2em] not-italic font-bold">MANIZALES</span>
+                    </h2>
                 </div>
             </div>
             
-            <div class="hidden md:flex items-center gap-8 text-xs uppercase font-bold tracking-widest">
-                <a href="#" class="text-red-600 transition">Inicio</a>
-                <a href="#" class="hover:text-red-600 transition">Acerca de</a>
-                <a href="#" class="hover:text-red-600 transition">Súper Menú</a>
-                <a href="#" class="hover:text-red-600 transition">Promos</a>
-                <a href="https://wa.me/573217182031" target="_blank" class="hover:text-red-600 transition text-green-500"><i class="fab fa-whatsapp text-lg"></i></a>
+            <div class="hidden md:flex items-center gap-8 text-xs uppercase font-black tracking-widest">
+                <a href="#" class="text-red-600 transition-colors">Inicio</a>
+                <a href="#" class="text-white hover:text-red-600 transition-colors">Acerca de</a>
+                <a href="#" class="text-white hover:text-red-600 transition-colors">Súper Menú</a>
+                <a href="#" class="text-white hover:text-red-600 transition-colors">Promos</a>
+                <a href="https://wa.me/573217182031" target="_blank" class="text-green-500 hover:text-green-400 text-xl transition-all hover:scale-110">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
 
-            <a href="https://wa.me/573217182031" class="bg-red-600 hover:bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-black uppercase transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(230,57,70,0.4)]">
-                Pide Ya
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/573217182031" class="hidden sm:block bg-red-600 hover:bg-red-700 text-white px-7 py-2.5 rounded-md text-sm font-black uppercase italic transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]">
+                    Pide Ya
+                </a>
+                <button class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
