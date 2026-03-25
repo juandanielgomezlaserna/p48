@@ -10,9 +10,9 @@
 <body class="bg-black text-white font-sans antialiased">
 
     <header class="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-zinc-800">
-        <nav class="container mx-auto px-6 py-3 flex items-center justify-between">
+        <nav class="container mx-auto px-6 py-3 flex items-center justify-between relative">
             <div class="flex items-center gap-4">
-                <a href="/" class="transition-transform hover:scale-105 active:scale-95 duration-300">
+                <a href="#" onclick="navigate('home')" class="transition-transform hover:scale-105 active:scale-95 duration-300">
                     <img src="assets/logo.png" alt="Logo P-48 Fast Food" class="h-16 w-auto object-contain">
                 </a>
                 <div class="hidden lg:block border-l border-zinc-700 pl-4">
@@ -22,20 +22,20 @@
                 </div>
             </div>
             
-            <div class="hidden md:flex items-center gap-8 text-xs uppercase font-black tracking-widest">
-                <a href="#" onclick="navigate('home')" class="text-red-600 transition-colors">Inicio</a>
-                <a href="#" onclick="navigate('menu')" class="text-white hover:text-red-600 transition-colors">Súper Menú</a>
-                <a href="#" onclick="navigate('home')" class="text-white hover:text-red-600 transition-colors">Promos</a>
-                <a href="https://wa.me/573217182031" target="_blank" class="text-green-500 hover:text-green-400 text-xl transition-all hover:scale-110">
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black/95 border-b border-zinc-800 p-6 flex-col gap-6 md:static md:bg-transparent md:border-none md:p-0 md:w-auto md:flex md:flex-row md:items-center md:gap-8 text-xs uppercase font-black tracking-widest transition-all">
+                <a href="#" onclick="navigate('home'); toggleMenu()" class="text-white hover:text-red-600 transition-colors">Inicio</a>
+                <a href="#" onclick="navigate('menu'); toggleMenu()" class="text-white hover:text-red-600 transition-colors">Súper Menú</a>
+                <a href="#" onclick="navigate('promos'); toggleMenu()" class="text-white hover:text-red-600 transition-colors">Promos</a>
+                <a href="https://wa.me/573217182031" target="_blank" class="text-green-500 hover:text-green-400 text-xl transition-all">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
 
             <div class="flex items-center gap-4">
-                <a href="https://wa.me/573217182031" class="hidden sm:block bg-red-600 hover:bg-red-700 text-white px-7 py-2.5 rounded-md text-sm font-black uppercase italic transition-all shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]">
+                <a href="https://wa.me/573217182031" class="hidden sm:block bg-red-600 hover:bg-red-700 text-white px-7 py-2.5 rounded-md text-sm font-black uppercase italic transition-all">
                     Pide Ya
                 </a>
-                <button class="md:hidden text-white text-2xl">
+                <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>

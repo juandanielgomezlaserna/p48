@@ -34,4 +34,13 @@ async function navigate(page) {
 
 // Cargar "inicio" por defecto al abrir la web
 window.onload = () => navigate('home');
-window.onload = () => navigate('menu');
+
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+}
+
+menuBtn.addEventListener('click', toggleMenu);
